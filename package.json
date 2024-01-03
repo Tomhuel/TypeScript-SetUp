@@ -1,5 +1,5 @@
 {
-  "name": "typescript-setup",
+  "name": "@tomhuel/typescript-setup",
   "version": "0.0.1",
   "description": "Little Script to SetUp my Project Estructure",
   "main": "src/index.mjs",
