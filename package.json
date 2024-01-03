@@ -1,0 +1,24 @@
+{
+  "name": "typescript-setup",
+  "version": "0.0.1",
+  "description": "Little Script to SetUp my Project Estructure",
+  "main": "src/index.mjs",
+  "bin": {
+    "typescript-setup": "./src/index.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomhuel/TypeScript-SetUp.git"
+  },
+  "author": "Tomhuel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tomhuel/TypeScript-SetUp/issues"
+  },
+  "homepage": "https://github.com/Tomhuel/TypeScript-SetUp#readme"
+}
