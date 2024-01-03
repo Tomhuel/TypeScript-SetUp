@@ -4,7 +4,7 @@
   "description": "Little Script to SetUp my Project Estructure",
   "main": "src/index.mjs",
   "bin": {
-    "typescript-setup": "./src/index.mjs"
+    "typescript-setup": "src/index.mjs"
   },
   "type": "module",
   "scripts": {
