@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { generagePackageJson } from './generatePackageJson.mjs';
 import { generateGitIgnore } from './generateGitIgnore.mjs';
+import { JestConfig } from './generateJestConfig.mjs';
 
 (async () => {
     await main();
@@ -65,6 +66,7 @@ async function main() {
         fs.mkdirSync('tests');
         fs.writeFileSync(path.join('tests', 'app.test.ts'), describeApp, { encoding: 'utf-8' });
         execSync('npx jest --init');
+        fs.writeFileSync('jest.config.ts', JestConfig, { encoding: 'utf-8' })
     }
 
     console.log('Proyect generated succesfully!');
