@@ -1,6 +1,6 @@
 {
   "name": "@tomhuel/typescript-setup",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Little Script to SetUp my Project Estructure",
   "main": "src/index.mjs",
   "bin": {

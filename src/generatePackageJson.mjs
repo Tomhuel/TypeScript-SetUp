@@ -16,6 +16,9 @@ const generagePackageJson = (projectName, jest = false) => {
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.4",

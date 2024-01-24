@@ -7,6 +7,7 @@ import { generagePackageJson } from './generatePackageJson.mjs';
 import { generateGitIgnore } from './generateGitIgnore.mjs';
 import { JestConfig } from './generateJestConfig.mjs';
 import { TsConfigTemplate } from './generateTsConfig.mjs';
+import { dotEnvExample } from './generateEnvFiles.mjs';
 
 (async () => {
     await main();
@@ -44,6 +45,10 @@ async function main() {
 
     console.log('Generating .gitignore...');
     fs.writeFileSync('.gitignore', generateGitIgnore, { encoding: 'utf-8' });
+
+    console.log('Generating .env & .env.template...');
+    fs.writeFileSync('.env', dotEnvExample, { encoding: 'utf-8' });
+    fs.writeFileSync('.env.template', dotEnvExample, { encoding: 'utf-8' });
 
     console.log('Installing Dependencies...');
     execSync('npm install');

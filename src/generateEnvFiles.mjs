@@ -1,0 +1,14 @@
+const dotEnvExample =
+`APP_NAME=
+APP_HOST=
+APP_PORT=
+APP_DEBUG=true
+
+DATABASE_HOST=
+DATABASE_PORT=
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASSWORD=
+`;
+
+export { dotEnvExample }
