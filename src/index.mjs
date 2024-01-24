@@ -6,6 +6,7 @@ import path from 'node:path';
 import { generagePackageJson } from './generatePackageJson.mjs';
 import { generateGitIgnore } from './generateGitIgnore.mjs';
 import { JestConfig } from './generateJestConfig.mjs';
+import { TsConfigTemplate } from './generateTsConfig.mjs';
 
 (async () => {
     await main();
@@ -48,12 +49,7 @@ async function main() {
     execSync('npm install');
 
     console.log('Creating tsconfig.json');
-    execSync('npx tsc --init --outDir dist/ --rootDir src');
-
-    const tsconfigContent = fs.readFileSync('./tsconfig.json', { encoding: 'utf-8' });
-    const tsconfig = tsconfigContent.split("\n");
-    tsconfig.splice(1, 0, `\t"exclude": ["node_modules", "dist", "tests", "jest.config.ts"],`);
-    fs.writeFileSync('tsconfig.json', tsconfig.join('\n'), { encoding: 'utf-8' });
+    fs.writeFileSync('tsconfig.json', TsConfigTemplate(), { encoding: 'utf-8' });
 
 
     if (!test) {
